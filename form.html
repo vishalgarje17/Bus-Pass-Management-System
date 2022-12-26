@@ -1,0 +1,1353 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>REGISTER A PASS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/concepts_register20/assets/css/registerdemo.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/icon" href="assets/favicon.ico">
+<link rel="icon" href="../../assets_2021/images/INClogo.png" type="image/x-icon">
+<link rel="shortcut icon" href="img/bus-icon.ico">
+<style>
+		
+		.main {
+		      background:#90caf9;
+              background: linear-gradient(to right,#29b6f6,#ffa726);
+              background-size: cover;
+			  
+		}
+		
+		.container{ 
+              width: 78%;
+              border: 1px solid balck;
+              background-color: white;
+   		} 
+		
+		.radio{
+			padding:10px;	
+		}	
+		
+			
+	</style>
+</head>
+<body class="main">
+<div>
+<div id="stars"></div>
+<div id="stars2"></div>
+<div id="stars3"></div>
+<div id="title"></div>
+<div class="navreg" style="background: linear-gradient(to right,#29b6f6,#ffa726);height:70px;">
+<a class="navbar-brand" data-scroll href="https://www.dkte.ac.in/" target="_blank"><img class="img-responsive" style="position:absolute; TOP:2%;left:0.5%;" src="img/dkte-logo.png" style="width:165%;" alt="logo" /></a>
+<a class="navbar-brand" data-scroll href="index.html"><img class="img-responsive" style="position:absolute;TOP:2%;right:3%;" src="img/new.png" alt="logo"></a>
+</div>
+<form class="container" onSubmit="return checkphone()" action="evaluationform.php" method="post" id="contact_form" enctype="multipart/form-data" style="border:3px solid black; padding:50px;border-radius: 5px;">
+<fieldset>
+<center>
+
+<h2 style="text-align:center;"> DKTE BUS PASS REGISTRATION FORM</h2><br>
+<h4 style="text-align:center;"></h4><br>
+<h4 style="text-align:center;">All Engineering Branches </h4>
+<hr>
+<h4 style="text-align:center; color: red;">** All Fields are Mandatory</h4>
+<h6 style="text-align:center; color: black;">( ENTER <strong style="color: black; font-size: 20px;"> NA </strong> FOR NOT APPLICABLE FIELDS )</h6>
+<hr>
+</center>
+<div class="row">
+<div class="col-lg-3 col"></div>
+<div class="col-lg-6 col-12">
+<div class="form-group">
+<label class="control-label">Department</label>
+<div class="selectContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+<select name="event" id="event" class="form-control selectpicker" onchange="myFunction21(this)" required>
+<option value="" selected="selected">Select Department</option>
+
+<option value="Pradnya">Textile</option>
+<option value="Pradnya">General Engineering</option>
+<option value="Pradnya">MBA/M.TECH</option>
+<option value="Pradnya">Diploma</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col"></div>
+<div class="col-lg-6 col-12">
+<div class="form-group" id="slotcheck" style="display:none;">
+<label class="control-label">BRANCH</label>
+<div class="selectContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+<select name="slot" id="slotcheck" class="form-control selectpicker">
+<option value="" selected="selected">Select Branch</option>
+<option value="Junior Slot">Computer Science and Engineering</option>
+<option value="Senior Slot">Electrical Engineering</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="  control-label">Name of Student</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-education"></i></span>
+<input name="college" placeholder="Student Name" class="form-control" type="text" required>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="  control-label">Select Bus </label>
+<div class="  selectContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+<select name="state" class="form-control selectpicker" required>
+	<option value="Source">Select Source</option>
+	<option value="DKTE, Ichalkranji">DKTE, Ichalkaranji</option>
+	<option value="Rajwada">Rajwada</option>
+	<option value="YCP, Ichalkaranji">YCP, Ichalkaranji</option>
+</select>
+<select name="Destination" class="form-control selectpicker" required>
+	<option value="Destination">Select Destination</option>
+	<option value="Sangli">Sangli</option>
+	<option value="Kolhapur">Kolhapur</option>
+	<option value="Jaysinghpur">Jaysighpur</option>
+</select>
+<input type="date" name="date" class="form-control" required>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="  control-label">Number of Members</label>
+<div class="  selectContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i><i class="glyphicon glyphicon-user"></i></span>
+<select id="noofmem" name="noofmem" class="form-control selectpicker" onchange="myFunction(this)" required>
+<option>Please select No. of Members</option>
+<option value="1" id="1" style="display:none;">1</option>
+<option value="2" id="2" style="display:none;">2</option>
+<option value="3" id="3" style="display:none;">3</option>
+<option value="4" id="4" style="display:none;">4</option>
+<option value="5" id="5" style="display:none;">5</option>
+<option value="6" id="6" style="display:none;">6</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="name1" style="display:none;">
+<label class="  control-label">PRN</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="name11" placeholder="Enter your PRN" class="form-control" type="text" required>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1"></div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="gender1" style="display:none;">
+<label class="  control-label">Gender</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<div class="radio">
+<label>
+<input type="radio" name="gender11" value="Male" required /> Male
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender11" value="Female" required /> Female
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-xs-1"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="email1" style="display:none;">
+<label class="  control-label">E-Mail 1</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+<input name="email11" id="email11" placeholder="E-Mail Address" class="form-control" type="text" required>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="phone1" style="display:none;">
+<label class="  control-label">Phone #1</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="phone11" id="phone11" placeholder="8888888888" class="form-control" type="text" required>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="file1" style="display:none;">
+<label class="  control-label">Upload Your Proof of Student (file ext.: jpg,png,pdf and max size:200kb)</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="file11" id="file11" class="form-control" type="file" required>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="name2" style="display:none;">
+<label class="  control-label">Full Name 2</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="name22" placeholder="Full Name" class="form-control" type="text">
+</div>
+</div>
+ </div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1"></div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="gender2" style="display:none;">
+<label class="  control-label">Gender</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<div class="radio">
+<label>
+<input type="radio" name="gender22" value="Male" /> Male
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender22" value="Female" /> Female
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-xs-1"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="email2" style="display:none;">
+<label class="  control-label">E-Mail 2</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+<input name="email22" id="email22" placeholder="E-Mail Address" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="phone2" style="display:none;">
+<label class="  control-label">Phone #2</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="phone22" id="phone22" placeholder="8888888888" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="file2" style="display:none;">
+<label class="  control-label">Upload Your Proof of Student (file ext.: jpg,png,pdf and max size:200kb)</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="file22" id="file22" class="form-control" type="file">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="name3" style="display:none;">
+<label class="  control-label">Full Name 3</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="name33" placeholder="Full Name" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1"></div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="gender3" style="display:none;">
+<label class="  control-label">Gender</label>
+<div class=" inputGroupContainer">
+<div class="input-group">
+<div class="radio">
+<label>
+<input type="radio" name="gender33" value="Male" /> Male
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender33" value="Female" /> Female
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-xs-1"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="email3" style="display:none;">
+<label class="  control-label">E-Mail 3</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+<input name="email33" placeholder="E-Mail Address" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="phone3" style="display:none;">
+<label class="  control-label">Phone #3</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="phone33" placeholder="8888888888" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="file3" style="display:none;">
+<label class="  control-label">Upload Your Proof of Student (file ext.: jpg,jpeg,png,pdf and max size:200kb)</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="file33" id="file33" class="form-control" type="file">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="name4" style="display:none;">
+<label class="  control-label">Full Name 4</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="name44" placeholder="Full Name" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1"></div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="gender4" style="display:none;">
+<label class="  control-label">Gender</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<div class="radio">
+<label>
+<input type="radio" name="gender44" value="Male" /> Male
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender44" value="Female" /> Female
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-xs-1"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="email4" style="display:none;">
+<label class="  control-label">E-Mail 4</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+<input name="email44" placeholder="E-Mail Address" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="phone4" style="display:none;">
+<label class="  control-label">Phone #4</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="phone44" placeholder="8888888888" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="file4" style="display:none;">
+<label class="  control-label">Upload Your Proof of Student (file ext.: jpg,jpeg,png,pdf and max size:200kb)</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="file44" id="file44" class="form-control" type="file">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+ </div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="name5" style="display:none;">
+<label class="  control-label">Full Name 5</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="name55" placeholder="Full Name" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1"></div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="gender5" style="display:none;">
+<label class="  control-label">Gender</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<div class="radio">
+<label>
+<input type="radio" name="gender55" value="Male" /> Male
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender55" value="Female" /> Female
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-xs-1"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="email5" style="display:none;">
+<label class="  control-label">E-Mail 5</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+<input name="email55" placeholder="E-Mail Address" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="phone5" style="display:none;">
+<label class="  control-label">Phone #5</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="phone55" placeholder="8888888888" class="form-control" type="text">
+ </div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="file5" style="display:none;">
+<label class="  control-label">Upload Your Proof of Student (file ext.: jpg,jpeg,png,pdf and max size:200kb)</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="file55" id="file55" class="form-control" type="file">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="name6" style="display:none;">
+<label class="  control-label">Full Name 6</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input name="name66" placeholder="Full Name" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1"></div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="gender6" style="display:none;">
+<label class="  control-label">Gender</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<div class="radio">
+<label>
+<input type="radio" name="gender66" value="Male" /> Male
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="gender66" value="Female" /> Female
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-xs-1"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="email6" style="display:none;">
+<label class="  control-label">E-Mail 6</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+<input name="email66" placeholder="E-Mail Address" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="phone6" style="display:none;">
+<label class="  control-label">Phone</label>
+<div class="  inputGroupContainer">
+ <div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="phone66" placeholder="8888888888" class="form-control" type="text">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<div class="form-group" id="file6" style="display:none;">
+<label class="  control-label">Upload Your Proof of Student</label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+<input name="file66" id="file66" class="form-control" type="file">
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<p><input type="checkbox" name="agree" value="1" required>
+I have read and I agree to all the above Rules.<br />
+</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="yukti_rules" style="display:none;">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+ <p><input type="checkbox" id="yukti_rules1" name="agree1" value="1">
+I have read and I agree to <a href="assets/Yukti_Rules.pdf"> Yukti Event Rules.</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="tantra_rules" style="display:none;">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<p><input type="checkbox" id="tantra_rules1" name="agree2" value="1">
+I have read and I agree to <a href="assets/Tantra_Rules.pdf"> Tantra Event Rules.</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="pratibha_rules" style="display:none;">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<p><input type="checkbox" id="pratibha_rules1" name="agree3" value="1">
+I have read and I agree to <a href="assets/Pratibha_rules.pdf"> Pratibha Event Rules.</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="pradnya_rules" style="display:none;">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<p><input type="checkbox" id="pradnya_rules1" name="agree4" value="1">
+I have read and I agree to <a href="assets/Pradnya_2022_rules.pdf"> Pradnya Event Rules.</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="naipunya_rules" style="display:none;">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<p><input type="checkbox" id="naipunya_rules1" name="agree5" value="1">
+I have read and I agree to <a href="assets/NAIPUNYA_Rules.pdf"> Naipunya Event Rules.</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="lakshya_rules" style="display:none;">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<p><input type="checkbox" id="lakshya_rules1" name="agree6" value="1">
+I have read and I agree to <a href="assets/Lakshya_rules.pdf"> Lakshya Event Rules.</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+<div class="row">
+<div class="col-lg-3 col-xs-1">
+</div>
+<div class="col-lg-6 col-xs-10">
+<div class="form-group" id="daksha_rules" style="display:none;">
+<label class="  control-label"></label>
+<div class="  inputGroupContainer">
+<div class="input-group">
+<p><input type="checkbox" id="daksha_rules1" name="agree7" value="1">
+I have read and I agree to <a href="assets/Daksha_rules.pdf"> Daksha Event Rules.</a> </p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3"></div>
+</div>
+
+<div class="alert alert-success" role="alert" style="text-align: center" id="success_message"><i class="glyphicon glyphicon-thumbs-up"></i>For any technical assistance feel free to contact :<strong><i class="fa fa-phone" style="margin:0 5px;font-size:20px"></i> Yash Gare : +91 9860807646, <i class="fa fa-whatsapp" style="margin:0 10px;font-size:20px"></i>Rushikesh Patil: +91 9423634124</strong>
+</div>
+
+<div class="row">
+<div class="col-lg-3"></div>
+<div class="col-lg-6">
+<center>
+<div class="form-group">
+<label class="  control-label"></label>
+<div class="pm-button">
+<button type="submit" name="submit" class="btn btn-block btn-warning" style="width:45%;">Proceed for payment<span class="glyphicon glyphicon-send"></span></button>
+</div>
+</div>
+</center>
+</div>
+<div class="col-lg-3"></div>
+</div>
+</fieldset>
+</form>
+</div>
+
+
+<script src="jquery-3.1.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="bootstrapvalidator.min.js"></script>
+<script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+<script type="text/javascript" src="jquery.simplyCountable.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="jquery.simplyCountable.js"></script>
+
+<script>
+
+
+	
+		
+function myFunction21(domain1) {
+	const selected_no_mem=document.getElementById("noofmem");
+	selected_no_mem.selectedIndex=0;
+	selected_no_mem.onchange();
+			document.getElementById("name1").style.display = "none";
+			document.getElementById("gender1").style.display = "none";
+            document.getElementById("email1").style.display = "none";
+            document.getElementById("phone1").style.display = "none";
+            document.getElementById("name2").style.display = "none";
+			document.getElementById("gender2").style.display = "none";
+            document.getElementById("email2").style.display = "none";
+            document.getElementById("phone2").style.display = "none";
+            document.getElementById("name3").style.display = "none";
+			document.getElementById("gender3").style.display = "none";
+            document.getElementById("email3").style.display = "none";
+            document.getElementById("phone3").style.display = "none";
+            document.getElementById("name4").style.display = "none";
+			document.getElementById("gender4").style.display = "none";
+            document.getElementById("email4").style.display = "none";
+            document.getElementById("phone4").style.display = "none";
+            document.getElementById("name5").style.display = "none";
+			document.getElementById("gender5").style.display = "none";
+            document.getElementById("email5").style.display = "none";
+            document.getElementById("phone5").style.display = "none";
+			document.getElementById("name6").style.display = "none";
+			document.getElementById("gender6").style.display = "none";
+            document.getElementById("email6").style.display = "none";
+            document.getElementById("phone6").style.display = "none";
+			document.getElementById("file1").style.display = "none";
+			document.getElementById("file2").style.display = "none";
+			document.getElementById("file3").style.display = "none";
+			document.getElementById("file4").style.display = "none";
+			document.getElementById("file5").style.display = "none";
+			document.getElementById("file6").style.display = "none";
+			
+			
+	
+	
+        var subevent = domain1.value;
+        
+	if(subevent=="Concepts"	 )
+	{
+		window.location.href = "/concepts_register21/";
+	}
+	if(subevent=="Pradnya"  ){
+		
+		document.getElementById("1").style.display = "block";
+		document.getElementById("2").style.display = "block";
+		document.getElementById("3").style.display = "none";
+		document.getElementById("4").style.display = "none";
+		document.getElementById("5").style.display = "none";
+		document.getElementById("6").style.display = "none";
+		document.getElementById("slotcheck").style.display = "block"; 
+		document.getElementById("pradnya_rules").style.display = "block";
+		document.getElementById("pradnya_rules1").required = true;
+		document.getElementById("lakshya_rules").style.display = "none";
+		document.getElementById("naipunya_rules").style.display = "none";
+		document.getElementById("tantra_rules").style.display = "none";
+		document.getElementById("pratibha_rules").style.display = "none";
+		document.getElementById("daksha_rules").style.display = "none";
+		document.getElementById("yukti_rules").style.display = "none"; 
+		
+	}
+					if(subevent=="Lakshya"  ){
+						document.getElementById("1").style.display = "block";
+						document.getElementById("2").style.display = "block";
+						document.getElementById("3").style.display = "none";
+						document.getElementById("4").style.display = "none";
+						document.getElementById("5").style.display = "none";
+						document.getElementById("6").style.display = "none";
+						document.getElementById("slotcheck").style.display = "none";  
+						document.getElementById("lakshya_rules").style.display = "block";
+						document.getElementById("lakshya_rules1").required = true;
+						document.getElementById("pradnya_rules").style.display = "none";
+						document.getElementById("naipunya_rules").style.display = "none";
+						document.getElementById("tantra_rules").style.display = "none";
+						document.getElementById("pratibha_rules").style.display = "none";
+						document.getElementById("daksha_rules").style.display = "none";
+						document.getElementById("yukti_rules").style.display = "none"; 
+						
+			
+					}
+				
+				 if (subevent=="Naipunya"  ){
+						document.getElementById("1").style.display = "block";
+						document.getElementById("2").style.display = "block";
+						document.getElementById("3").style.display = "none";
+						document.getElementById("4").style.display = "none";
+						document.getElementById("5").style.display = "none";
+						document.getElementById("6").style.display = "none";
+						document.getElementById("slotcheck").style.display = "block";  
+						document.getElementById("naipunya_rules").style.display = "block";
+						document.getElementById("naipunya_rules1").required = true;
+						document.getElementById("lakshya_rules").style.display = "none";
+						document.getElementById("pradnya_rules").style.display = "none";
+						document.getElementById("tantra_rules").style.display = "none";
+						document.getElementById("pratibha_rules").style.display = "none";
+						document.getElementById("daksha_rules").style.display = "none";
+						document.getElementById("yukti_rules").style.display = "none";
+					 	
+			
+					}
+				
+					if (subevent=="Tantra"  ){
+						document.getElementById("1").style.display = "block";
+						document.getElementById("2").style.display = "block";
+						document.getElementById("3").style.display = "none";
+						document.getElementById("4").style.display = "none";
+						document.getElementById("5").style.display = "none";
+						document.getElementById("6").style.display = "none";
+						document.getElementById("slotcheck").style.display = "block"; 
+						document.getElementById("tantra_rules").style.display = "block";
+						document.getElementById("tantra_rules1").required = true;
+						document.getElementById("naipunya_rules").style.display = "none";
+						document.getElementById("lakshya_rules").style.display = "none";
+						document.getElementById("pradnya_rules").style.display = "none";
+						document.getElementById("pratibha_rules").style.display = "none";
+						document.getElementById("daksha_rules").style.display = "none";
+						document.getElementById("yukti_rules").style.display = "none"; 
+						let noofmem = document.getElementById("noofmem");
+						
+			
+					}
+					if(subevent=="Pratibha"  ){
+						document.getElementById("1").style.display = "none";
+						document.getElementById("2").style.display = "block";
+						document.getElementById("3").style.display = "block";
+						document.getElementById("4").style.display = "block";
+						document.getElementById("5").style.display = "none";
+						document.getElementById("6").style.display = "none";
+						document.getElementById("slotcheck").style.display = "none"; 
+						document.getElementById("pratibha_rules").style.display = "block";
+						document.getElementById("pratibha_rules1").required = true;
+						document.getElementById("tantra_rules").style.display = "none";
+						document.getElementById("naipunya_rules").style.display = "none";
+						document.getElementById("lakshya_rules").style.display = "none";
+						document.getElementById("pradnya_rules").style.display = "none";
+						document.getElementById("daksha_rules").style.display = "none";
+						document.getElementById("yukti_rules").style.display = "none"; 
+						
+						
+			
+					}
+					 if (subevent=="Daksha"  ){
+						document.getElementById("1").style.display = "block";
+						document.getElementById("2").style.display = "block";
+						document.getElementById("3").style.display = "none";
+						document.getElementById("4").style.display = "none";
+						document.getElementById("5").style.display = "none";
+						document.getElementById("6").style.display = "none";
+						document.getElementById("slotcheck").style.display = "none"; 
+						document.getElementById("daksha_rules").style.display = "block";
+						document.getElementById("daksha_rules1").required = true;
+						document.getElementById("pratibha_rules").style.display = "none";
+						document.getElementById("tantra_rules").style.display = "none";
+						document.getElementById("naipunya_rules").style.display = "none";
+						document.getElementById("lakshya_rules").style.display = "none";
+						document.getElementById("pradnya_rules").style.display = "none";
+						document.getElementById("yukti_rules").style.display = "none"; 
+						
+			
+					}
+				
+					
+					if(subevent=="Yukti"  ){
+						document.getElementById("1").style.display = "block";
+						document.getElementById("2").style.display = "block";
+						document.getElementById("3").style.display = "block";
+						document.getElementById("4").style.display = "block";
+						document.getElementById("5").style.display = "block";
+						document.getElementById("6").style.display = "block";
+						document.getElementById("slotcheck").style.display = "none";
+						document.getElementById("yukti_rules").style.display = "block";
+						document.getElementById("yukti_rules1").required = true;
+						document.getElementById("daksha_rules").style.display = "none";
+						document.getElementById("pratibha_rules").style.display = "none";
+						document.getElementById("tantra_rules").style.display = "none";
+						document.getElementById("naipunya_rules").style.display = "none";
+						document.getElementById("lakshya_rules").style.display = "none";
+						document.getElementById("pradnya_rules").style.display = "none";  
+						
+			
+					}
+	
+}
+    
+</script>
+<script>
+	/*
+	function checkphone(){
+		var em1=document.getElementById("email11").value;
+		var emailpat=/^([A-Za-z0-9_\-\.])+\@([a-z0-9_\-\.])+\.([a-z]{2,4})$/;
+				var em2=document.getElementById("email22").value;
+		    var no2=document.getElementById("phone22").value;
+
+		    var no1=document.getElementById("phone11").value;
+		 if(emailpat.test(em1)==true){
+		if(no1.length==10 ){
+				//return true;
+			 if(emailpat.test(em2)==true){
+		if(no2.length==10 ){
+				//return true;
+			
+			
+		}
+		else{
+			alert("invalid phone number 2");
+			return false;
+		}
+		 }
+		else{
+			alert("invalid Email-id 2");
+			return false;
+		}
+			
+		}
+		else{
+			alert("invalid phone number 1");
+			return false;
+		}
+		 }
+		else{
+			alert("invalid Email-id 1");
+			return false;
+		}
+			
+	} */
+	
+	
+	function checkphone(){
+		var em=document.getElementById("email11").value;
+		var emailpat=/^([a-z0-9_\-\.])+\@([a-z0-9_\-\.])+\.([a-z]{2,4})$/;
+		    var no1=document.getElementById("phone11").value;
+		 if(emailpat.test(em)==true){
+
+if(no1.length==10 ){
+				return true;
+		}
+			 else{
+			alert("invalid phone number");
+			return false;
+		}
+             // window.location.href="home.html";
+            // alert("registered");
+           }
+		 else{
+			alert("invalid Email-id");
+			return false;
+		}
+		
+		
+		
+			
+	}
+	
+	
+	
+	
+    function myFunction(noofmem) {
+        var noofmem1 = noofmem.value;
+		
+       if (noofmem1 == '1') {
+            document.getElementById("name1").style.display = "block";
+			document.getElementById("gender1").style.display = "block";
+            document.getElementById("email1").style.display = "block";
+            document.getElementById("phone1").style.display = "block";
+			document.getElementById("file1").style.display = "block";
+            document.getElementById("name2").style.display = "none";
+			document.getElementById("gender2").style.display = "none";
+            document.getElementById("email2").style.display = "none";
+            document.getElementById("phone2").style.display = "none";
+		   document.getElementById("file2").style.display = "none";
+            document.getElementById("name3").style.display = "none";
+			document.getElementById("gender3").style.display = "none";
+            document.getElementById("email3").style.display = "none";
+            document.getElementById("phone3").style.display = "none";
+		   document.getElementById("file3").style.display = "none";
+            document.getElementById("name4").style.display = "none";
+			document.getElementById("gender4").style.display = "none";
+            document.getElementById("email4").style.display = "none";
+            document.getElementById("phone4").style.display = "none";
+		   document.getElementById("file4").style.display = "none";
+            document.getElementById("name5").style.display = "none";
+			document.getElementById("gender5").style.display = "none";
+            document.getElementById("email5").style.display = "none";
+            document.getElementById("phone5").style.display = "none";
+		   document.getElementById("file5").style.display = "none";
+			document.getElementById("name6").style.display = "none";
+			document.getElementById("gender6").style.display = "none";
+            document.getElementById("email6").style.display = "none";
+            document.getElementById("phone6").style.display = "none";
+		   document.getElementById("file6").style.display = "none";
+		//   window.location.href = "individual/success1.php";
+        }
+		
+		else if (noofmem1 == '2') {
+            document.getElementById("name1").style.display = "block";
+			document.getElementById("gender1").style.display = "block";
+            document.getElementById("email1").style.display = "block";
+            document.getElementById("phone1").style.display = "block";
+			 document.getElementById("file1").style.display = "block";
+            document.getElementById("name2").style.display = "block";
+			document.getElementById("gender2").style.display = "block";
+            document.getElementById("email2").style.display = "block";
+            document.getElementById("phone2").style.display = "block";
+			 document.getElementById("file2").style.display = "block";
+            document.getElementById("name3").style.display = "none";
+			document.getElementById("gender3").style.display = "none";
+            document.getElementById("email3").style.display = "none";
+            document.getElementById("phone3").style.display = "none";
+			document.getElementById("file3").style.display = "none";
+            document.getElementById("name4").style.display = "none";
+			document.getElementById("gender4").style.display = "none";
+            document.getElementById("email4").style.display = "none";
+            document.getElementById("phone4").style.display = "none";
+			document.getElementById("file4").style.display = "none";
+            document.getElementById("name5").style.display = "none";
+			document.getElementById("gender5").style.display = "none";
+            document.getElementById("email5").style.display = "none";
+            document.getElementById("phone5").style.display = "none";
+			document.getElementById("name6").style.display = "none";
+			document.getElementById("gender6").style.display = "none";
+            document.getElementById("email6").style.display = "none";
+            document.getElementById("phone6").style.display = "none";
+			document.getElementById("file5").style.display = "none";
+			document.getElementById("file6").style.display = "none";
+        }
+        else if (noofmem1 == '3') {
+            document.getElementById("name1").style.display = "block";
+			document.getElementById("gender1").style.display = "block";
+            document.getElementById("email1").style.display = "block";
+            document.getElementById("phone1").style.display = "block";
+			 document.getElementById("file1").style.display = "block";
+            document.getElementById("name2").style.display = "block";
+			document.getElementById("gender2").style.display = "block";
+            document.getElementById("email2").style.display = "block";
+            document.getElementById("phone2").style.display = "block";
+			 document.getElementById("file2").style.display = "block";
+            document.getElementById("name3").style.display = "block";
+			document.getElementById("gender3").style.display = "block";
+            document.getElementById("email3").style.display = "block";
+            document.getElementById("phone3").style.display = "block";
+			 document.getElementById("file3").style.display = "block";
+            document.getElementById("name4").style.display = "none";
+			document.getElementById("gender4").style.display = "none";
+            document.getElementById("email4").style.display = "none";
+            document.getElementById("phone4").style.display = "none";
+            document.getElementById("name5").style.display = "none";
+			document.getElementById("gender5").style.display = "none";
+            document.getElementById("email5").style.display = "none";
+            document.getElementById("phone5").style.display = "none";
+			document.getElementById("name6").style.display = "none";
+			document.getElementById("gender6").style.display = "none";
+            document.getElementById("email6").style.display = "none";
+            document.getElementById("phone6").style.display = "none";
+			document.getElementById("file4").style.display = "none";
+			document.getElementById("file5").style.display = "none";
+			document.getElementById("file6").style.display = "none";
+        }
+        else if (noofmem1 == '4') {
+            document.getElementById("name1").style.display = "block";
+			document.getElementById("gender1").style.display = "block";
+            document.getElementById("email1").style.display = "block";
+            document.getElementById("phone1").style.display = "block";
+			 document.getElementById("file1").style.display = "block";
+            document.getElementById("name2").style.display = "block";
+			document.getElementById("gender2").style.display = "block";
+            document.getElementById("email2").style.display = "block";
+            document.getElementById("phone2").style.display = "block";
+			 document.getElementById("file2").style.display = "block";
+            document.getElementById("name3").style.display = "block";
+			document.getElementById("gender3").style.display = "block";
+            document.getElementById("email3").style.display = "block";
+            document.getElementById("phone3").style.display = "block";
+			 document.getElementById("file3").style.display = "block";
+            document.getElementById("name4").style.display = "block";
+			document.getElementById("gender4").style.display = "block";
+            document.getElementById("email4").style.display = "block";
+            document.getElementById("phone4").style.display = "block";
+			 document.getElementById("file4").style.display = "block";
+            document.getElementById("name5").style.display = "none";
+			document.getElementById("gender5").style.display = "none";
+            document.getElementById("email5").style.display = "none";
+            document.getElementById("phone5").style.display = "none";
+			document.getElementById("name6").style.display = "none";
+			document.getElementById("gender6").style.display = "none";
+            document.getElementById("email6").style.display = "none";
+            document.getElementById("phone6").style.display = "none";
+			document.getElementById("file5").style.display = "none";
+			document.getElementById("file6").style.display = "none";
+        }
+		else if (noofmem1 == '5') {
+            document.getElementById("name1").style.display = "block";
+			document.getElementById("gender1").style.display = "block";
+            document.getElementById("email1").style.display = "block";
+            document.getElementById("phone1").style.display = "block";
+			 document.getElementById("file1").style.display = "block";
+            document.getElementById("name2").style.display = "block";
+			document.getElementById("gender2").style.display = "block";
+            document.getElementById("email2").style.display = "block";
+            document.getElementById("phone2").style.display = "block";
+			 document.getElementById("file2").style.display = "block";
+            document.getElementById("name3").style.display = "block";
+			document.getElementById("gender3").style.display = "block";
+            document.getElementById("email3").style.display = "block";
+            document.getElementById("phone3").style.display = "block";
+			 document.getElementById("file3").style.display = "block";
+            document.getElementById("name4").style.display = "block";
+			document.getElementById("gender4").style.display = "block";
+            document.getElementById("email4").style.display = "block";
+            document.getElementById("phone4").style.display = "block";
+			 document.getElementById("file4").style.display = "block";
+            document.getElementById("name5").style.display = "block";
+			document.getElementById("gender5").style.display = "block";
+            document.getElementById("email5").style.display = "block";
+            document.getElementById("phone5").style.display = "block";
+			 document.getElementById("file5").style.display = "block";
+			document.getElementById("name6").style.display = "none";
+			document.getElementById("gender6").style.display = "none";
+            document.getElementById("email6").style.display = "none";
+            document.getElementById("phone6").style.display = "none";
+			document.getElementById("file6").style.display = "none";
+		}	
+        else if (noofmem1 == '6') {
+            document.getElementById("name1").style.display = "block";
+			document.getElementById("gender1").style.display = "block";
+            document.getElementById("email1").style.display = "block";
+            document.getElementById("phone1").style.display = "block";
+			 document.getElementById("file1").style.display = "block";
+            document.getElementById("name2").style.display = "block";
+			document.getElementById("gender2").style.display = "block";
+            document.getElementById("email2").style.display = "block";
+            document.getElementById("phone2").style.display = "block";
+			 document.getElementById("file2").style.display = "block";
+            document.getElementById("name3").style.display = "block";
+			document.getElementById("gender3").style.display = "block";
+            document.getElementById("email3").style.display = "block";
+            document.getElementById("phone3").style.display = "block";
+			 document.getElementById("file3").style.display = "block";
+            document.getElementById("name4").style.display = "block";
+			document.getElementById("gender4").style.display = "block";
+            document.getElementById("email4").style.display = "block";
+            document.getElementById("phone4").style.display = "block";
+			 document.getElementById("file4").style.display = "block";
+            document.getElementById("name5").style.display = "block";
+			document.getElementById("gender5").style.display = "block";
+            document.getElementById("email5").style.display = "block";
+            document.getElementById("phone5").style.display = "block";
+			 document.getElementById("file5").style.display = "block";
+			document.getElementById("name6").style.display = "block";
+			document.getElementById("gender6").style.display = "block";
+            document.getElementById("email6").style.display = "block";
+            document.getElementById("phone6").style.display = "block";
+			 document.getElementById("file6").style.display = "block";
+        }
+        else {
+           document.getElementById("name1").style.display = "none";
+			document.getElementById("gender1").style.display = "none";
+            document.getElementById("email1").style.display = "none";
+            document.getElementById("phone1").style.display = "none";
+            document.getElementById("name2").style.display = "none";
+			document.getElementById("gender2").style.display = "none";
+            document.getElementById("email2").style.display = "none";
+            document.getElementById("phone2").style.display = "none";
+            document.getElementById("name3").style.display = "none";
+			document.getElementById("gender3").style.display = "none";
+            document.getElementById("email3").style.display = "none";
+            document.getElementById("phone3").style.display = "none";
+            document.getElementById("name4").style.display = "none";
+			document.getElementById("gender4").style.display = "none";
+            document.getElementById("email4").style.display = "none";
+            document.getElementById("phone4").style.display = "none";
+            document.getElementById("name5").style.display = "none";
+			document.getElementById("gender5").style.display = "none";
+            document.getElementById("email5").style.display = "none";
+            document.getElementById("phone5").style.display = "none";
+			document.getElementById("name6").style.display = "none";
+			document.getElementById("gender6").style.display = "none";
+            document.getElementById("email6").style.display = "none";
+            document.getElementById("phone6").style.display = "none";
+			document.getElementById("file1").style.display = "none";
+			document.getElementById("file2").style.display = "none";
+			document.getElementById("file3").style.display = "none";
+			document.getElementById("file4").style.display = "none";
+			document.getElementById("file5").style.display = "none";
+			document.getElementById("file6").style.display = "none";
+			
+        }
+    }
+</script>
+</body>
+</html>
